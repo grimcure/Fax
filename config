@@ -431,6 +431,8 @@ local function IsVisibleFromCamera(targetPos)
 	return obstructionDistance >= targetDistance - 0.05
 end
 
+task.wait(5)
+
 game.ReplicatedStorage.Requests.GetMouse.OnClientInvoke = function(v145)
 	if game:GetService("UserInputService"):IsKeyDown(Enum.KeyCode.X) then
 		return {
