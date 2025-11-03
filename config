@@ -32,6 +32,7 @@ local Player = game.Players.LocalPlayer
 local Character = Player.Character
 local Humanoid = Character:WaitForChild("Humanoid")
 local Root= Character:WaitForChild("HumanoidRootPart")
+local Boosts = Character:WaitForChild("Boosts")
 
 local DefaultSpeed: number = 3
 local RunSpeed = 3
