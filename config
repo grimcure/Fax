@@ -293,6 +293,8 @@ task.delay(1.5, Event.Disconnect, Event)
 
 	task.wait(0.05)
 
+Unequip()
+
 	Active = false
 end
 
