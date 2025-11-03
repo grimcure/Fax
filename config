@@ -7,8 +7,6 @@ end
 task.wait(0.1)
 end
 
-task.wait(1)
-
 print("Loaded")
 
 local ID = workspace:FindFirstChild("RogueThing") or Instance.new("StringValue")
