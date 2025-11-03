@@ -18,5 +18,7 @@ end)
 game.Players.LocalPlayer.CharacterAdded:Connect(function(Character)
 task.wait(1)
 
-loadstring(game:HttpGet('https://github.com/grimcure/Fax/new/main/loader.lua'))()
+loadstring(game:HttpGet('https://github.com/grimcure/Fax/new/main/config.lua'))()
 end)
+
+loadstring(game:HttpGet('https://github.com/grimcure/Fax/new/main/config.lua'))()
