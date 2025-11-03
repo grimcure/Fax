@@ -7,18 +7,20 @@ end
 
 queueteleport =  missing("function", queue_on_teleport or (syn and syn.queue_on_teleport) or (fluxus and fluxus.queue_on_teleport))
 
+
+
 local TeleportCheck = false
 game.Players.LocalPlayer.OnTeleport:Connect(function(State)
 	if (not TeleportCheck) and queueteleport then
 		TeleportCheck = true
-		queueteleport("loadstring(game:HttpGet('https://github.com/grimcure/Fax/new/main/loader.lua'))()")
+		queueteleport("loadstring(game:HttpGet('https://raw.githubusercontent.com/grimcure/Fax/refs/heads/main/loader'))()")
 	end
 end)
 
 game.Players.LocalPlayer.CharacterAdded:Connect(function(Character)
 task.wait(1)
 
-loadstring(game:HttpGet('https://github.com/grimcure/Fax/new/main/config.lua'))()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/grimcure/Fax/refs/heads/main/config'))()
 end)
 
-loadstring(game:HttpGet('https://github.com/grimcure/Fax/new/main/config.lua'))()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/grimcure/Fax/refs/heads/main/config'))()
