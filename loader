@@ -18,8 +18,6 @@ game.Players.LocalPlayer.OnTeleport:Connect(function(State)
 end)
 
 game.Players.LocalPlayer.CharacterAdded:Connect(function(Character)
-task.wait(1)
-
 loadstring(game:HttpGet('https://raw.githubusercontent.com/grimcure/Fax/refs/heads/main/config'))()
 end)
 
