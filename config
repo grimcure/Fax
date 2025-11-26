@@ -437,7 +437,7 @@ end
 task.wait(5)
 
 game.ReplicatedStorage.Requests.GetMouse.OnClientInvoke = function(v145)
-	if game:GetService("UserInputService"):IsKeyDown(Enum.KeyCode.X) then
+	if game:GetService("UserInputService"):IsKeyDown(Enum.KeyCode.X) or Character:FindFirstChild("Ignis") then
 		return {
 			Hit = Mouse.Hit,
 			Target = Mouse.Target,
