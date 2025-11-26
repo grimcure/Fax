@@ -325,6 +325,31 @@ if Key.KeyCode == Enum.KeyCode.C then
 		MyBuff.Value = DefaultSpeed
 	end
 
+	if Key.KeyCode == Enum.KeyCode.X then
+		local Vel = Root:FindFirstChild("ForwardVelocity")
+
+		if Vel and math.abs(Vel.Velocity.Magnitude - 90) < 3 then
+			Vel.Name = "BodyVelocity"
+			local Old = Vel.MaxForce
+			local Old2 = Vel.P
+			Vel.MaxForce = Vector3.new(10000, 50000, 1000)
+
+			local Rand = 1000
+
+			Vel.Velocity += Vector3.new(0, Rand, 0)
+			Vel.P = 150000
+
+			workspace.CurrentCamera.CFrame *= CFrame.Angles(0, math.rad(90), 0)
+
+			task.wait(0.05)
+			Vel.Velocity -= Vector3.new(0, Rand, 0)
+
+			Vel.P= Old2
+			Vel.Name = "ForwardVelocity"
+			Vel.MaxForce = Old
+		end
+	end
+
 	if Key.KeyCode == Enum.KeyCode.G then
 		if not ManaRemote then
 			return
